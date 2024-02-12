@@ -15,6 +15,8 @@ const App = () => {
     duration: 10,
   });
 
+  const validInput = userInput.duration >= 1;
+
   function handleChange(inputIdentifier: string, newValue: string) {
     setUserInput((prevUserInput) => {
       console.log("prevUserInput :", prevUserInput);
@@ -33,7 +35,13 @@ const App = () => {
         title="React Investment Calculator"
       />
       <UserInput state={userInput} onChange={handleChange} />
-      <Table state={userInput} />
+      {!validInput && (
+        <p className="center">
+          Please, enter valid input data. Make sure your duration is set to
+          more, than 0
+        </p>
+      )}
+      {validInput && <Table state={userInput} />}
     </>
   );
 };
