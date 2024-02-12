@@ -21,8 +21,6 @@ const UserInput = ({ onChange, state }: Props) => {
             onChange={(e) => onChange("initialInvestment", e.target.value)}
           />
         </p>
-      </div>
-      <div className="input-group">
         <p>
           <label>Annual Investment</label>
           <input
@@ -43,8 +41,6 @@ const UserInput = ({ onChange, state }: Props) => {
             onChange={(e) => onChange("expectedReturn", e.target.value)}
           />
         </p>
-      </div>
-      <div className="input-group">
         <p>
           <label>Duration</label>
           <input
