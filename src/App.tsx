@@ -1,8 +1,8 @@
 import { lazy, useState } from "react";
-import Header from "./components/Header.tsx";
+import Header from "@components/Header.tsx";
 
-const UserInput = lazy(() => import("./components/UserInput.tsx"));
-const Table = lazy(() => import("./components/table/Table.tsx"));
+const UserInput = lazy(() => import("@components/UserInput.tsx"));
+const Table = lazy(() => import("@components/table/Table.tsx"));
 
 const App = () => {
   const [userInput, setUserInput] = useState({
@@ -33,7 +33,7 @@ const App = () => {
       {!validInput && (
         <p className="center">
           Please, enter valid input data. Make sure your duration is set to
-          more, than 0
+          more, than
         </p>
       )}
       {validInput && <Table state={userInput} />}

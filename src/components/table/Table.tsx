@@ -1,4 +1,4 @@
-import { calculateInvestmentResults, formatter } from "../../util/investment";
+import { calculateInvestmentResults, formatter } from "@util/investment.ts";
 interface Props {
   state: {
     initialInvestment: number;
