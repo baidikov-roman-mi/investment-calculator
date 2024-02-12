@@ -32,7 +32,9 @@ const Table = ({ state }: Props) => {
           <tbody>
             {resData.map((data) => {
               const totalInterest =
-                data.valueEndOfYear - data.annualInvestment * data.year;
+                data.valueEndOfYear -
+                data.annualInvestment * data.year -
+                initialInvestment;
               const totalAmountInvested = data.valueEndOfYear - totalInterest;
 
               return (
