@@ -10,6 +10,7 @@ interface Props {
   expectedReturn: number;
   duration: number;
 }
+
 export function calculateInvestmentResults({
   initialInvestment,
   annualInvestment,
