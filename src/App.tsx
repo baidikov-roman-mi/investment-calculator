@@ -8,10 +8,23 @@ const Table = lazy(() => import("./components/table/Table.tsx"));
 // calculateInvestmentResults();
 
 const App = () => {
-  // const [initial, setInitial] = useState(0);
+  const [userInput, setUserInput] = useState({
+    initialInvestment: 100,
+    annualInvestment: 10,
+    expectedReturn: 6,
+    duration: 10,
+  });
 
-  // function handleInitial() {
-  // }
+  function handleChange(inputIdentifier: string, newValue: string) {
+    setUserInput((prevUserInput) => {
+      console.log("prevUserInput :", prevUserInput);
+
+      return {
+        ...prevUserInput,
+        [inputIdentifier]: parseFloat(newValue),
+      };
+    });
+  }
 
   return (
     <>
@@ -19,10 +32,8 @@ const App = () => {
         logo="investment-calculator-logo"
         title="React Investment Calculator"
       />
-        <UserInput />
-      <div id="result" className="center">
-        <Table />
-      </div>
+      <UserInput state={userInput} onChange={handleChange} />
+      <Table state={userInput} />
     </>
   );
 };
