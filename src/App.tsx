@@ -18,7 +18,7 @@ const App = () => {
   function handleChange(inputIdentifier: string, newValue: string) {
     setUserInput((prevUserInput) => {
       console.log("prevUserInput :", prevUserInput);
-
+      // like that
       return {
         ...prevUserInput,
         [inputIdentifier]: parseFloat(newValue),
