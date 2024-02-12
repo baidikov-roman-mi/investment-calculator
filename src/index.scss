@@ -1,6 +1,8 @@
 $white: #e1eeeb;
 $white-green: #c2e9e0;
 $green: #83e6c0;
+$radial-gradient: radial-gradient(#303b37, #1a1f1d);
+$gradient: linear-gradient(180deg, #307e6c, #2b996d);
 $Quicksand: "Quicksand", sans-serif;
 $Roboto: "Roboto Condensed", sans-serif;
 $background-color: transparent;
@@ -14,7 +16,7 @@ body {
   font-family: $Quicksand;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: radial-gradient(#303b37, #1a1f1d);
+  background: $radial-gradient;
   color: $white;
   min-height: 100vh;
 }
@@ -36,7 +38,7 @@ body {
   max-width: 30rem;
   margin: 2rem auto;
   border-radius: 4px;
-  background: linear-gradient(180deg, #307e6c, #2b996d);
+  background: $gradient;
   label {
     display: block;
     margin-bottom: 0.25rem;
@@ -84,4 +86,19 @@ body {
   text-align: center;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.dialog {
+  border: 2px solid $green;
+  background: $radial-gradient;
+  gap: 1rem;
+  color: $white;
+  max-width: 30rem;
+  button {
+    border: none;
+    padding: 1rem;
+    background: $gradient;
+    color: $white-green;
+  }
 }
