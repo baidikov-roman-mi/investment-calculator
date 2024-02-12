@@ -10,7 +10,6 @@ interface Props {
 
 const Table = ({ state }: Props) => {
   const resData = calculateInvestmentResults(state);
-  console.log("resData :", resData);
 
   const initialInvestment =
     resData[0].valueEndOfYear -

@@ -4,9 +4,6 @@ import Header from "./components/Header.tsx";
 const UserInput = lazy(() => import("./components/UserInput.tsx"));
 const Table = lazy(() => import("./components/table/Table.tsx"));
 
-// import { calculateInvestmentResults } from "./util/investment.ts";
-// calculateInvestmentResults();
-
 const App = () => {
   const [userInput, setUserInput] = useState({
     initialInvestment: 100,
@@ -19,8 +16,6 @@ const App = () => {
 
   function handleChange(inputIdentifier: string, newValue: string) {
     setUserInput((prevUserInput) => {
-      console.log("prevUserInput :", prevUserInput);
-      // like that
       return {
         ...prevUserInput,
         [inputIdentifier]: parseFloat(newValue),
